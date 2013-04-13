@@ -1,63 +1,3 @@
-@font-face {
-    font-family: "PT Sans";
-
-    src: url("../fonts/PTS55F_W.eot");
-    src: url("../fonts/PTS55F_W.eot?#iefix") format("embedded-opentype"),
-         url("../fonts/PTS55F_W.woff") format("woff"),
-         url("../fonts/PTS55F_W.ttf") format("truetype"),
-         url("../fonts/PTS55F_W.svg#PTSans-Regula") format("svg");
-
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: "PT Sans";
-
-    src: url("../fonts/PTS75F_W.eot");
-    src: url("../fonts/PTS75F_W.eot?#iefix") format("embedded-opentype"),
-         url("../fonts/PTS75F_W.woff") format("woff"),
-         url("../fonts/PTS75F_W.ttf") format("truetype"),
-         url("../fonts/PTS75F_W.svg#PTSans-Bold") format("svg");
-
-    font-weight: bold;
-    font-style: normal;
-}
-@font-face {
-    font-family: "PT Sans";
-
-    src: url("../fonts/PTS76F_W.eot");
-    src: url("../fonts/PTS76F_W.eot?#iefix") format("embedded-opentype"),
-         url("../fonts/PTS76F_W.woff") format("woff"),
-         url("../fonts/PTS76F_W.ttf") format("truetype"),
-         url("../fonts/PTS76F_W.svg#PTSans-BoldItalic") format("svg");
-
-    font-weight: normal;
-    font-style: italic;
-}
-@font-face {
-    font-family: "PT Serif";
-
-    src: url("../fonts/PTF75F_W.eot");
-    src: url("../fonts/PTF75F_W.eot?#iefix") format("embedded-opentype"),
-         url("../fonts/PTF75F_W.woff") format("woff"),
-         url("../fonts/PTF75F_W.ttf") format("truetype"),
-         url("../fonts/PTF75F_W.svg#PTSerif-Bold") format("svg");
-
-    font-weight: bold;
-    font-style: normal;
-}
-@font-face {
-    font-family: "PT Serif";
-
-    src: url("../fonts/PTF55F_W.eot");
-    src: url("../fonts/PTF55F_W.eot?#iefix") format("embedded-opentype"),
-         url("../fonts/PTF55F_W.woff") format("woff"),
-         url("../fonts/PTF55F_W.ttf") format("truetype"),
-         url("../fonts/PTF55F_W.svg#PTSerif-Regular") format("svg");
-
-    font-weight: normal;
-    font-style: normal;
-}
 .clearfix:before,
 .clearfix:after {
     content: " ";
@@ -75,7 +15,7 @@ body, html{
   height: 100%;
 }
 html .content {
-  height: 100%;
+  min-height: 100%;
   position: relative;
   width: 800px;
   margin-left: 50%;
@@ -141,7 +81,8 @@ h2 ul li a{
   padding: 0 0 0 198px;
 }
 .pict{
-  float: left;
+  position: absolute;
+  margin-top: 5px;
 }
 h6{
   font-size: 18px;
@@ -153,6 +94,8 @@ h6 a{
   color: #000000;
 }
 h3{
+  z-index: 3;
+  color: #ffffff;
   font-weight: normal;
   margin: 0px;
   font-style: italic;
@@ -162,19 +105,22 @@ h3{
   padding-left: 10px;
   padding-bottom: 5px;
   position: absolute;
+}
+#first{
+  left: -20px;
+  top: 10px; 
+  background: #ff6666;
+}
+#second{
   left: -40px;
-  top: 6px;  
-  letter-spacing: 0.1em;
- }
- #first{
-background: #ff6666;
- }
- #second{
-background: #99cc66;
- }
- #third{
-background: #6699cc;
- }
+  top: -15px; 
+  background: #99cc66;
+}
+#third{ 
+  left: -40px;
+  top: -15px; 
+  background: #6699cc;
+}
  /*********************foiter hw1*****************************/
 #zero{
   height: 110px;
@@ -182,7 +128,7 @@ background: #6699cc;
 .foot{
   width: 800px;
   margin: auto;
-  border-top: 1px solid #666666;;
+  border-top: 1px solid #666666;
   padding-top: 15px;
   margin-top: -110px;
   color: #666666;
@@ -223,7 +169,8 @@ background: #6699cc;
 }
 /************************header hw 1.1*********************************/
 nav{
-  padding: 10px;
+  padding-bottom: 105px;
+  padding-top: 10px;
   text-align: center;
 }
 nav a{
@@ -235,15 +182,6 @@ nav li{
 }
 #internet{
   font-weight: bold;
-}
-h4{
-  width: 600px;
-  font-size: 24px;
-  font-family: PT Serif;
-  padding-top: 105px;
-  position: relative;
-  margin: 0 0 0 -200px;
-  left: 50%;
 }
 .open-tin-tack{
 background: rgb(252,255,244); /* Old browsers */
@@ -298,4 +236,70 @@ font-size: 14px;
 .open-tin-tack a
 {
 color: #666666;
+}
+h4{
+  width: 600px;
+  font-size: 24px;
+  font-family: PT Serif;
+  position: relative;
+  margin: 0px;
+}
+.oside{
+  position: absolute;
+}
+.gist{
+  width: 600px;
+  position: relative;
+  right: -200px;
+}
+.ad{
+  color: #666666;
+  font: 10px Verdana;
+  width: 180px;
+  position: absolute;
+  left: 0px; 
+  letter-spacing: 0.1em; 
+  bottom: 630px;
+}
+#like{
+  padding: 0px;
+  margin-top: 75px;
+  position: relative;
+  border-top: 1px solid #666666;
+  font-size: 12px;
+  height: 250px;
+  margin-bottom: 35px;
+}
+#like a{
+  color: #003366;
+  font-size: 14px;
+}
+#like p{
+  padding: 0px;
+  margin: 0px; 
+}
+#hunting{
+  position: absolute;
+  left: 200px;
+  width: 187px;
+  margin-top: -10px;
+}
+#cheap{
+  position: absolute;
+  left: 406px;
+  width: 187px;
+  margin-top: -10px;
+}
+#odor{
+  position: absolute;
+  right: 0px;
+  width: 187px;
+  margin-top: -10px;
+}
+#another{
+  font-size: 14px;
+  color: #333333;
+  padding-top: 10px;
+  width: 150px;
+  font-weight: bold;
 }
