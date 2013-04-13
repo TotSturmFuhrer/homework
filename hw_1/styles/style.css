@@ -58,11 +58,30 @@
     font-weight: normal;
     font-style: normal;
 }
-body{
-  background: url(img/background.gif);
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+ 
+.clearfix:after {
+    clear: both;
+}
+body, html{
+  background: url(../img/background.gif);
   margin: 0px;
+  padding:0px;
   font-family: PT Sans;
-  }
+  height: 100%;
+}
+html .content {
+  height: 100%;
+  position: relative;
+  width: 800px;
+  margin-left: 50%;
+  left: -400px;
+}
+/*******************header hw1*****************************/
 .logo{
 	position: absolute; 
 	top: 10px;
@@ -93,12 +112,28 @@ h2{
   margin: 0em;
   font-size: 18px;
 }
+h2 ul{
+  padding: 0px;
+  margin: 0px;
+}
+h2 ul li{
+  display: inline;
+}
+h2 ul li:after{
+  content: "•";
+  margin: 0 3px;
+}
+h2 ul li:last-child:after{
+  content: " ";
+  margin: 0;
+}
+h2 ul li a{
+  text-decoration: none;
+  color: #000000;
+}
+/*******************content hw1*************************/
 .tip{
   padding: 20px;
-  position: relative;
-  width: 800px;
-  margin-left: 50%;
-  left: -400px;
   min-height: 96px;
 }
 .txt{
@@ -112,8 +147,10 @@ h6{
   font-size: 18px;
   margin-top: 0.1em;
   margin-bottom: 0.1em;
-  text-decoration: underline;
   width: 500px;
+}
+h6 a{
+  color: #000000;
 }
 h3{
   font-weight: normal;
@@ -138,20 +175,21 @@ background: #99cc66;
  #third{
 background: #6699cc;
  }
+ /*********************foiter hw1*****************************/
 #zero{
   height: 110px;
 }
 .foot{
   width: 800px;
-  position: relative;
-  margin-left: 50%;
-  left: -400px;
+  margin: auto;
   border-top: 1px solid #666666;;
-  min-height: 92px;
   padding-top: 15px;
   margin-top: -110px;
   color: #666666;
+  clear:both;
+  height: 110px;
 }
+/***************************** login hw1***************************************/
 #spirit{
   background: #000000;
   opacity: .3; 
@@ -182,4 +220,82 @@ background: #6699cc;
   color: #666666;
   text-decoration: none;
   border-bottom: 1px dashed #666666;
+}
+/************************header hw 1.1*********************************/
+nav{
+  padding: 10px;
+  text-align: center;
+}
+nav a{
+  color: #003366;
+}
+nav li{
+  margin-right: 20px;
+  display: inline;
+}
+#internet{
+  font-weight: bold;
+}
+h4{
+  width: 600px;
+  font-size: 24px;
+  font-family: PT Serif;
+  padding-top: 105px;
+  position: relative;
+  margin: 0 0 0 -200px;
+  left: 50%;
+}
+.open-tin-tack{
+background: rgb(252,255,244); /* Old browsers */
+background: -moz-linear-gradient(top, rgba(252,255,244,1) 0%, rgba(223,229,215,1) 40%, rgba(179,190,173,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(252,255,244,1)), color-stop(40%,rgba(223,229,215,1)), color-stop(100%,rgba(179,190,173,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(252,255,244,1) 0%,rgba(223,229,215,1) 40%,rgba(179,190,173,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(252,255,244,1) 0%,rgba(223,229,215,1) 40%,rgba(179,190,173,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(252,255,244,1) 0%,rgba(223,229,215,1) 40%,rgba(179,190,173,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom, rgba(252,255,244,1) 0%,rgba(223,229,215,1) 40%,rgba(179,190,173,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#b3bead',GradientType=0 ); /* IE6-9 */
+position: absolute;
+overflow: hidden;
+border-radius: 7px;
+top:16px;
+padding: 3px 8px 3px 5px;
+right: 10px;
+box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+color: #666666;
+text-shadow: 1px 1px 1px #ffffff;
+z-index: 1;
+}
+.open-tin-tack p
+{
+margin: 0;
+font-size: 14px;
+}
+.open-tin-tack p:before
+{
+position: absolute;
+height: 8px;
+left: 8px;
+top: 10px;
+width: 8px;
+content: " ";
+}
+.open-tin-tack:hover p:before
+{
+background-position: 0 -6px;
+}
+.open-tin-tack ul
+{
+display: none;
+}
+.open-tin-tack:hover ul
+{
+display: inline;
+margin: 0;
+padding: 0;
+line-height:1.7em;
+font-size: 14px;
+}
+.open-tin-tack a
+{
+color: #666666;
 }
