@@ -248,11 +248,16 @@ h4{
   position: absolute;
 }
 .gist{
+  font-size: 14px;
   width: 600px;
   position: relative;
   right: -200px;
 }
+.gist a{
+  color: #003366;
+}
 .ad{
+  font-size: 14px;
   color: #666666;
   font: 10px Verdana;
   width: 180px;
